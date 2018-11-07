@@ -4,59 +4,41 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] private string mouseXInputName;
-    [SerializeField] private string mouseYInputName;
-    [SerializeField] private float mouseSensitivity;
+    public float Sensitivity;
+    public float Smoothing;
 
-    [SerializeField] private Transform playerBody;
+    private Vector2 mouseLook;
+    private Vector2 smoothV;
 
-    private float xAxisClamp;
+    private GameObject player;
 
-    private void Awake()
-    {
-        LockCursor();
-        xAxisClamp = 0.0f;
-    }
-
-
-    private void LockCursor()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        player = transform.parent.gameObject;
+        mouseLook.x = (180);
     }
 
-    private void Update()
+    void Update()
     {
-        CameraRotation();
-    }
-
-    private void CameraRotation()
-    {
-        float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
-
-        xAxisClamp += mouseY;
-
-        if (xAxisClamp > 90.0f)
+        if (Input.GetKey(KeyCode.Escape))
         {
-            xAxisClamp = 90.0f;
-            mouseY = 0.0f;
-            ClampXAxisRotationToValue(270.0f);
-        }
-        else if (xAxisClamp < -90.0f)
-        {
-            xAxisClamp = -90.0f;
-            mouseY = 0.0f;
-            ClampXAxisRotationToValue(90.0f);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
-        transform.Rotate(Vector3.left * mouseY);
-        playerBody.Rotate(Vector3.up * mouseX);
-    }
+        Vector2 mouseDirection = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
-    private void ClampXAxisRotationToValue(float value)
-    {
-        Vector3 eulerRotation = transform.eulerAngles;
-        eulerRotation.x = value;
-        transform.eulerAngles = eulerRotation;
+        mouseDirection.x *= Sensitivity * Smoothing;
+        mouseDirection.y *= Sensitivity * Smoothing;
+
+        smoothV.x = Mathf.Lerp(smoothV.x, mouseDirection.x, 1f / Smoothing);
+        smoothV.y = Mathf.Lerp(smoothV.y, mouseDirection.y, 1f / Smoothing);
+
+        mouseLook += smoothV;
+        mouseLook.y = Mathf.Clamp(mouseLook.y, -90, 90);
+
+        transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+        player.transform.rotation = Quaternion.AngleAxis(mouseLook.x, player.transform.up);
     }
 }
