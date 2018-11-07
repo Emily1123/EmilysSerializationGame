@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [System.Serializable]
 public class GameData
 {
-    public string saveName;
+    public Vector3 savePos;
+    public Quaternion saveRotation;
+    public string savePressed;
 }

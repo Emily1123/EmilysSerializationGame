@@ -4,49 +4,21 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SaveLoad : MonoBehaviour {
+public class SaveLoad : MonoBehaviour
+{
+    const string FILE_NAME = "GameSaveData.txt";
 
-    private string fileName = "GameData.json";
-    private string filePath;
-
-    private static SaveLoad _instance;
-    public SaveLoad Instance
-    {
-        get {return _instance;}
-    }
-
-    GameData gameData;
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-        if(_instance == null)
-        {
-            _instance = new SaveLoad();
-        }
-
-        if (gameData == null)
-        {
-            gameData = new GameData();
-        }
-
-        filePath = Path.Combine(Application.dataPath, fileName);
-
-        Debug.Log(filePath);
-    }
+    public ItemsToBeSaved items;
 
     public void LoadGameData()
     {
-        string json;
+        string pathToLoad = System.IO.Path.Combine(Application.streamingAssetsPath, FILE_NAME);
+        FileInfo savedEntries = new FileInfo(pathToLoad);
 
-        if (File.Exists(filePath))
+        if (savedEntries.Exists)
         {
-            json = File.ReadAllText(filePath);
-            gameData = JsonUtility.FromJson<GameData>(json);
-        }
-        else
-        {
-            Debug.Log("File is missing: " + filePath);
+            string jsonObj = File.ReadAllText(pathToLoad);
+            items.gameEntries = new List<GameData>(JsonUtility.FromJson<SerializableData>(jsonObj).entries);
         }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -54,13 +26,13 @@ public class SaveLoad : MonoBehaviour {
 
     public void SaveGameData()
     {
-        string json = JsonUtility.ToJson(gameData);
+        string jsonObj = JsonUtility.ToJson(items.Save());
 
-        if (!File.Exists(filePath))
-        {
-            File.Create(filePath).Dispose();
-        }
+        string pathToSave = System.IO.Path.Combine(Application.streamingAssetsPath, FILE_NAME);
 
-        File.WriteAllText(filePath, json);
+        DirectoryInfo streamingAssetsFolder = new DirectoryInfo(Application.streamingAssetsPath);
+        if (!streamingAssetsFolder.Exists) streamingAssetsFolder.Create();
+
+        File.WriteAllText(pathToSave, jsonObj);
     }
 }
