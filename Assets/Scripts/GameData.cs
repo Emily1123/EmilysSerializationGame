@@ -7,5 +7,4 @@ public class GameData
 {
     public Vector3 savePos;
     public Quaternion saveRotation;
-    public string savePressed;
 }
