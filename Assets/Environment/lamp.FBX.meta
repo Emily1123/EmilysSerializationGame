@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 939f3cdc60ac8b64d82fdbf773cd09a3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Lamp
+    100002: //RootNode
+    100004: Lamp_White
+    100006: LampBase
+    100008: LampBase_White
+    100010: LampFill
+    100012: LampFlexSection
+    100014: LampFlexSection_White
+    100016: LampHandle
+    100018: LampHandleWhite
+    100020: LampHead
+    100022: LampHead_White
+    100024: LampHeadPart
+    100026: LampHeadPart_White
+    100028: LampLens
+    100030: LampLens_White
+    100032: LampLensHolder
+    100034: LampLensHolder_White
+    100036: LampPowerCord
+    100038: LampPowerCord_White
+    100040: LampSpot_MR_Spot
+    100042: LampSpot_MR_Spot.Target
+    100044: LampStem
+    100046: LampStem_White
+    100048: LampSwitch
+    100050: LampSwitch_White
+    100052: LampSwitchSurround
+    100054: LampSwitchSurround_White
+    100056: YayMe!
+    400000: Lamp
+    400002: //RootNode
+    400004: Lamp_White
+    400006: LampBase
+    400008: LampBase_White
+    400010: LampFill
+    400012: LampFlexSection
+    400014: LampFlexSection_White
+    400016: LampHandle
+    400018: LampHandleWhite
+    400020: LampHead
+    400022: LampHead_White
+    400024: LampHeadPart
+    400026: LampHeadPart_White
+    400028: LampLens
+    400030: LampLens_White
+    400032: LampLensHolder
+    400034: LampLensHolder_White
+    400036: LampPowerCord
+    400038: LampPowerCord_White
+    400040: LampSpot_MR_Spot
+    400042: LampSpot_MR_Spot.Target
+    400044: LampStem
+    400046: LampStem_White
+    400048: LampSwitch
+    400050: LampSwitch_White
+    400052: LampSwitchSurround
+    400054: LampSwitchSurround_White
+    400056: YayMe!
+    2100000: MR_BlackMetal
+    2100002: MR_chrome
+    2100004: MR_coverglass
+    2100006: MR_BlackPlastic
+    2100008: blackplastic
+    2100010: MR_WhiteMetal
+    2100012: silverplastic
+    2100014: MR_WhitePlastic
+    2100016: No Name
+    2300000: LampBase
+    2300002: LampBase_White
+    2300004: LampFlexSection
+    2300006: LampFlexSection_White
+    2300008: LampHandle
+    2300010: LampHandleWhite
+    2300012: LampHead
+    2300014: LampHead_White
+    2300016: LampHeadPart
+    2300018: LampHeadPart_White
+    2300020: LampLens
+    2300022: LampLens_White
+    2300024: LampLensHolder
+    2300026: LampLensHolder_White
+    2300028: LampPowerCord
+    2300030: LampPowerCord_White
+    2300032: LampStem
+    2300034: LampStem_White
+    2300036: LampSwitch
+    2300038: LampSwitch_White
+    2300040: LampSwitchSurround
+    2300042: LampSwitchSurround_White
+    2300044: YayMe!
+    3300000: LampBase
+    3300002: LampBase_White
+    3300004: LampFlexSection
+    3300006: LampFlexSection_White
+    3300008: LampHandle
+    3300010: LampHandleWhite
+    3300012: LampHead
+    3300014: LampHead_White
+    3300016: LampHeadPart
+    3300018: LampHeadPart_White
+    3300020: LampLens
+    3300022: LampLens_White
+    3300024: LampLensHolder
+    3300026: LampLensHolder_White
+    3300028: LampPowerCord
+    3300030: LampPowerCord_White
+    3300032: LampStem
+    3300034: LampStem_White
+    3300036: LampSwitch
+    3300038: LampSwitch_White
+    3300040: LampSwitchSurround
+    3300042: LampSwitchSurround_White
+    3300044: YayMe!
+    4300000: LampFlexSection
+    4300002: LampLensHolder
+    4300004: LampLens
+    4300006: LampHead
+    4300008: LampHeadPart
+    4300010: LampHandle
+    4300012: LampSwitch
+    4300014: LampSwitchSurround
+    4300016: LampBase
+    4300018: LampStem
+    4300020: LampPowerCord
+    4300022: LampBase_White
+    4300024: LampFlexSection_White
+    4300026: LampLensHolder_White
+    4300028: LampLens_White
+    4300030: LampHead_White
+    4300032: LampHeadPart_White
+    4300034: LampHandleWhite
+    4300036: LampSwitch_White
+    4300038: LampSwitchSurround_White
+    4300040: LampStem_White
+    4300042: LampPowerCord_White
+    4300044: YayMe!
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: LampFill
+    10800002: LampSpot_MR_Spot
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_BlackMetal
+    second: {fileID: 2100000, guid: a4300a68d2d9ee5438f63bc5aad7823c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_BlackPlastic
+    second: {fileID: 2100000, guid: 1bf801bfd2d1c3b438c2ede6c3b10577, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_WhiteMetal
+    second: {fileID: 2100000, guid: e36936e8681482e449135b7829b81214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_WhitePlastic
+    second: {fileID: 2100000, guid: 915d36e3ebbd53f4e845a06e7908023d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_chrome
+    second: {fileID: 2100000, guid: c5079ba27f6033741b0041aed4d7e6ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MR_coverglass
+    second: {fileID: 2100000, guid: b94489b474d267f478d1379074e220cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 03aea28af1d88c74a8476706f2b8f759, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackplastic
+    second: {fileID: 2100000, guid: 4b56122216194ca499b2ef811b168ac9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silverplastic
+    second: {fileID: 2100000, guid: db4a8cb20f273fe4d9428cadb5f636f6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
