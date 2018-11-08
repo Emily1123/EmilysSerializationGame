@@ -16,7 +16,8 @@ public class ItemsToBeSaved : MonoBehaviour
     public string SaveData()
     {
 
-        JsonArray jsonArray = new JsonArray {
+        JsonArray jsonArray = new JsonArray
+        {
             jsons = new string[buttons.Count + 1]
         };
 
@@ -32,7 +33,8 @@ public class ItemsToBeSaved : MonoBehaviour
         // if (save != null) save();
 
 
-        for( int index = 0; index < buttons.Count; index++ ) {
+        for( int index = 0; index < buttons.Count; index++ )
+        {
             string buttonJson = buttons[index].SaveMe();
             jsonArray.jsons[index + 1] = buttonJson;
         }
@@ -42,16 +44,20 @@ public class ItemsToBeSaved : MonoBehaviour
         return allJson;
     }
 
-    public void Load( string allJson ) {
+    public void Load( string allJson )
+    {
         JsonArray jsonArray = JsonUtility.FromJson<JsonArray>( allJson );
 
-        for( int index = 0; index < jsonArray.jsons.Length; index++ ) {
-            if( index == 0 ) {
+        for( int index = 0; index < jsonArray.jsons.Length; index++ )
+        {
+            if( index == 0 )
+            {
                 GameData playerData = JsonUtility.FromJson<GameData>( jsonArray.jsons[index] );
                 player.transform.position = playerData.savePos;
                 player.transform.rotation = playerData.saveRotation;
             }
-            else {
+            else
+            {
                 buttons[index - 1].LoadMe( jsonArray.jsons[index] );
             }
         }
@@ -69,6 +75,7 @@ public class SerializableData
     public GameData[] entries;
 }
 
-public class JsonArray {
+public class JsonArray
+{
     public string[] jsons;
 }

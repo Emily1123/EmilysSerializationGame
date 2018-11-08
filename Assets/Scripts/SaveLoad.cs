@@ -10,7 +10,8 @@ public class SaveLoad : MonoBehaviour
 
     public ItemsToBeSaved items;
 
-    void Start() {
+    void Start()
+    {
         LoadGameData();
     }
 
@@ -23,7 +24,6 @@ public class SaveLoad : MonoBehaviour
         {
             string jsonObj = File.ReadAllText(pathToLoad);
             items.Load( jsonObj );
-            // items.gameEntries = new List<GameData>(JsonUtility.FromJson<SerializableData>(jsonObj).entries);
         }
     }
 

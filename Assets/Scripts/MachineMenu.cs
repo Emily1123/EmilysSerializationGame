@@ -1,26 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class MachineMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MachineMenu : MonoBehaviour
 {
-    //GameObject currentHover;
+    public GameObject[] go;
+    public AudioSource audioData;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void IfClicked ()
     {
-        if (eventData.pointerCurrentRaycast.gameObject != null)
+        go = GameObject.FindGameObjectsWithTag("mb");
+        foreach (GameObject mb in go)
         {
-            //currentHover = eventData.pointerCurrentRaycast.gameObject;
-            // Cursor.lockState = CursorLockMode.Confined;
-            // Cursor.visible = true;
+            mb.GetComponent<Button>().interactable = !mb.GetComponent<Button>().interactable;
         }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void MB1()
     {
-        // Cursor.lockState = CursorLockMode.None;
-        // Cursor.visible = false;
-        //currentHover = null;
+        audioData.Play();
     }
 }

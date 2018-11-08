@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour {
-
+public class PauseMenu : MonoBehaviour
+{
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    public Camera cam;
 
 	void Update ()
     {
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void Resume()
     {
+        cam.enabled = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -33,6 +36,7 @@ public class PauseMenu : MonoBehaviour {
 
     void Pause()
     {
+        cam.enabled = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
