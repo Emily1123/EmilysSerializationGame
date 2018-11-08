@@ -58,16 +58,19 @@
      <Compile Include="Assets\Scripts\ButtonState.cs" />
      <Compile Include="Assets\Scripts\CursorVolume.cs" />
      <Compile Include="Assets\Scripts\GameData.cs" />
-     <Compile Include="Assets\Scripts\ItemsToBeSaved.cs" />
-     <Compile Include="Assets\Scripts\MachineMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\SaveLoad.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\SavingAllData.cs" />
      <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+=======
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+>>>>>>> Audio
      <None Include="Assets\FinalVignette\Assets\Shaders\FinalVignette.shader" />
      <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
