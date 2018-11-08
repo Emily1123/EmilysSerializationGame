@@ -12,15 +12,15 @@ public class MachineMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
             //currentHover = eventData.pointerCurrentRaycast.gameObject;
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.Confined;
+            // Cursor.visible = true;
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.None;
+        // Cursor.visible = false;
         //currentHover = null;
     }
 }

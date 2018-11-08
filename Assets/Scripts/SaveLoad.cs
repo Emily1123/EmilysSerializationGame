@@ -10,6 +10,10 @@ public class SaveLoad : MonoBehaviour
 
     public ItemsToBeSaved items;
 
+    void Start() {
+        LoadGameData();
+    }
+
     public void LoadGameData()
     {
         string pathToLoad = System.IO.Path.Combine(Application.streamingAssetsPath, FILE_NAME);
@@ -18,15 +22,14 @@ public class SaveLoad : MonoBehaviour
         if (savedEntries.Exists)
         {
             string jsonObj = File.ReadAllText(pathToLoad);
-            items.gameEntries = new List<GameData>(JsonUtility.FromJson<SerializableData>(jsonObj).entries);
+            items.Load( jsonObj );
+            // items.gameEntries = new List<GameData>(JsonUtility.FromJson<SerializableData>(jsonObj).entries);
         }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void SaveGameData()
     {
-        string jsonObj = JsonUtility.ToJson(items.Save());
+        string jsonObj = items.SaveData();
 
         string pathToSave = System.IO.Path.Combine(Application.streamingAssetsPath, FILE_NAME);
 
