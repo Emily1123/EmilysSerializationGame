@@ -6,6 +6,7 @@ TagManager:
   tags:
   - mb
   - col
+  - help text
   layers:
   - Default
   - TransparentFX

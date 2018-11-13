@@ -28,7 +28,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        cam.enabled = true;
+        cam.GetComponent<PlayerLook>().enabled = true;
+        Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -36,6 +37,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        cam.GetComponent<PlayerLook>().enabled = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
